@@ -1,10 +1,8 @@
 # Data Preparation
 
-This section examines summary statistics for the fraud_data.csv dataset and splits it into training and test 
-sets to train and evaluate several models detecting fraud in credit card transactions.  
-This project focuses on selecting appropriate model evaluation metrics when classes are imbalanced.
+This section examines summary statistics for the fraud_data.csv dataset.  It then splits the dataset into training and test sets to train several models and evaluate their effectiveness in detecting fraud in credit card transactions. This project focuses on selecting the appropriate model evaluation metrics when classes are imbalanced.
 
-A description of the dataset and code for importing it are provided in the [previous section](https://eagronin.github.io/credit-card-fraud-acquire/).
+A description of the dataset and code for importing the data are provided in the [previous section](https://eagronin.github.io/credit-card-fraud-acquire/).
 
 Construction of the model and analysis are presented in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).
 
@@ -18,10 +16,7 @@ print(round(df.describe().transpose(), 3))
 print('\nThe number of missing values across all attributes and samples: ', df.isnull().sum().sum())
 ```
 
-The summary statistics below indicate that there are 21,693 transactions in the data, of which 1.6% are fraudulant 
-transactions.  The average transaction amount being substantially higher than the median suggests that there 
-is a relatively small number of very large transactions that drive the mean upward.  The dataset has no 
-missing values.
+The summary statistics below show that there are 21,693 transactions in the data, of which 1.6% are fraudulant.  The average transaction amount being substantially higher than the median suggests that there is a relatively small number of very large transactions that drive the mean upward.  The dataset has no missing values.
 
 ```
           count    mean      std     min    25%     50%     75%       max
@@ -59,13 +54,7 @@ Class   21693.0   0.016    0.127   0.000  0.000   0.000   0.000     1.000
 The number of missing values across all attributes and samples:  0
 ```
 
-The following code splits the sample into training and test sets for the analysis discussed in the 
-[next section](https://eagronin.github.io/credit-card-fraud-analyze/).  It then fits a scaler to the training data
-and then transforms both the training and test data using the fitted scaler.  Features need to be scaled for the
-models fitted in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).
-
-It is important to note that the scaler should be fitted to the training data only (rather than to the entire dataset)
-in order to prevent leakage of information from the test data.
+The following code splits the sample into training and test sets:
 
 ```python
 # Split the data into X_train, X_test, y_train, y_test
@@ -73,7 +62,13 @@ X = df.iloc[:,:-1]
 y = df.iloc[:,-1]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
+```
 
+Features need to be scaled prior to training the models described in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).  The code below fits a scaler to the training data and transforms both the training and test data using the fitted scaler.  
+
+It is important to note that the scaler should be fitted to the training data only (rather than to the entire dataset) in order to prevent leakage of information from the test data.
+
+```
 # Scale the data
 scaler = StandardScaler().fit(X_train)
 X_train = scaler.transform(X_train)
