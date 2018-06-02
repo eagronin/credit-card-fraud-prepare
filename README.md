@@ -4,9 +4,9 @@ This section examines summary statistics for the fraud_data.csv dataset and spli
 sets to train and evaluate several models detecting fraud in credit card transactions.  
 This project focuses on selecting appropriate model evaluation metrics when classes are imbalanced.
 
-A description of the dataset and code for importing it are provided in the [previous section](https://eagronin.github.io/sv-weather-acquire/).
+A description of the dataset and code for importing it are provided in the [previous section](https://eagronin.github.io/credit-card-fraud-acquire/).
 
-Construction of the model and analysis are presented in the [next section](https://eagronin.github.io/sv-weather-analyze/).
+Construction of the model and analysis are presented in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).
 
 The following code outputs summary statistcis for each of the features:
 
