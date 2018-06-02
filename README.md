@@ -72,7 +72,7 @@ in order to prevent leakage of information from the test data.
 X = df.iloc[:,:-1]
 y = df.iloc[:,-1]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
 
 # Scale the data
 scaler = StandardScaler().fit(X_train)
@@ -80,4 +80,4 @@ X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 ```
 
-# Next step: [Analysis](https://eagronin.github.io/credit-card-fraud-analyze/)
+Next step: [Analysis](https://eagronin.github.io/credit-card-fraud-analyze/)
