@@ -64,7 +64,7 @@ y = df.iloc[:,-1]
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
 ```
 
-Features need to be scaled prior to training the models described in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).  The code below fits a scaler to the training data and transforms both the training and test data using the fitted scaler.  
+Features need to be scaled before we train the models described in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).  The code below fits a scaler to the training data and transforms both the training and test data using the fitted scaler.  
 
 It is important to note that the scaler should be fitted to the training data only (rather than to the entire dataset) in order to prevent leakage of information from the test data.
 
