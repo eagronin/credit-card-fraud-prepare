@@ -68,7 +68,7 @@ Features need to be scaled before we train the models described in the [next sec
 
 It is important to note that the scaler should be fitted to the training data only (rather than to the entire dataset) in order to prevent leakage of information from the test data.
 
-```
+```python
 # Scale the data
 scaler = StandardScaler().fit(X_train)
 X_train = scaler.transform(X_train)
