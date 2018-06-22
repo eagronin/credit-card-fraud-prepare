@@ -1,10 +1,14 @@
 # Data Preparation
 
+## Overview
+
 This section examines summary statistics for the fraud_data.csv dataset.  It then splits the dataset into training and test sets to train several models and evaluate their effectiveness in detecting fraud in credit card transactions. This project focuses on selecting the appropriate model evaluation metrics when classes are imbalanced.
 
 A description of the dataset and code for importing the data are provided in the [previous section](https://eagronin.github.io/credit-card-fraud-acquire/).
 
 Construction of the model and analysis are presented in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).
+
+## Data Exploration and Processing
 
 The following code outputs summary statistcis for each of the features:
 
