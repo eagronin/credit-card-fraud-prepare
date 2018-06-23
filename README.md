@@ -8,6 +8,10 @@ A description of the dataset and code for importing the data are provided in the
 
 Construction of the model and analysis are presented in the [next section](https://eagronin.github.io/credit-card-fraud-analyze/).
 
+This project is based on assignments from Applied Machine Learning in Python by University of Michigan on Coursera.
+
+The analysis for this project was performed in Python.
+
 ## Data Exploration and Processing
 
 The following code outputs summary statistcis for each of the features:
