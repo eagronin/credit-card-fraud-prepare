@@ -14,7 +14,7 @@ The analysis for this project was performed in Python.
 
 ## Data Exploration and Processing
 
-The following code outputs summary statistcis for each of the features:
+The following code outputs summary statistics for each of the features:
 
 ```python
 # Read data and output summary statistics 
@@ -24,7 +24,7 @@ print(round(df.describe().transpose(), 3))
 print('\nThe number of missing values across all attributes and samples: ', df.isnull().sum().sum())
 ```
 
-The summary statistics below show that there are 21,693 transactions in the data, of which 1.6% are fraudulant.  The average transaction amount being substantially higher than the median suggests that there is a relatively small number of very large transactions that drive the mean upward.  The dataset has no missing values.
+The summary statistics below show that there are 21,693 transactions in the data, of which 1.6% are fraudulent.  The average transaction amount being substantially higher than the median suggests that there is a relatively small number of very large transactions that drive the mean upward.  The dataset has no missing values.
 
 ```
           count    mean      std     min    25%     50%     75%       max
